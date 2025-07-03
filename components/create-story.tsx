@@ -3,10 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 import { Camera, Plus } from "lucide-react";
 import { useRef, useState } from "react";
 import {cn} from "@/lib/utils";
-import { z } from 'zod'
 import { resizeImageToBase64 } from "@/utils/imageUtils";
 import { uuid } from "zod/v4";
-import { create } from "domain";
 import { SaveStory } from "@/utils/localStorageUtils";
 import { Story } from "@/lib/type-verification";
 export default function CreateStory({onStoryAdded}: {onStoryAdded?: () => void}) {
@@ -33,11 +31,9 @@ export default function CreateStory({onStoryAdded}: {onStoryAdded?: () => void})
             }
             console.log("New Story Created:", newStory);
             SaveStory(newStory);
-         //   refreshStories();
          if(onStoryAdded){
             onStoryAdded();
          }
-
         }
         catch(error){
             console.error("Error resizing image:", error);
