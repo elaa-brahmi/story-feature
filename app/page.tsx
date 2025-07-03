@@ -1,8 +1,12 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import CreateStory from "@/components/create-story";
+import StoryContainer from "@/components/StoryContainer";
+
 
 export default function Home() {
   return (
-   <div>home</div>
+   <div className="flex flex-col ">
+    <CreateStory/>
+    <StoryContainer/>
+   </div>
   );
 }
