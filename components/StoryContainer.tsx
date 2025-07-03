@@ -13,6 +13,7 @@ export default function StoryContainer({ refresh }: { refresh?: number  }) {
   useEffect(() => {
     setStories(GetStories());//GetStories() is only called on the client, after the component mounts.
   }, [refresh]); // Reload when refresh changes
+  //The code inside useEffect will run every time the refresh prop changes.
   console.log("stories from story container",stories);
   return (
     <div className="flex gap-3 mt-10 min-w-screen  px-10">
