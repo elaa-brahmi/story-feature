@@ -18,7 +18,7 @@ export default function StoryContainer({ refresh }: { refresh?: number  }) {
   return (
     <div className="flex gap-3 mt-10 min-w-screen  px-10">
           {stories.map((story) => (
-          <div key={story.id} className="w-20 h-20 rounded-full bg-gradient-to-tr
+          <div key={story.id} className="cursor-pointer w-20 h-20 rounded-full bg-gradient-to-tr
            from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
               <div className="w-full h-full rounded-full bg-white flex items-center justify-center"> 
                 <Image
